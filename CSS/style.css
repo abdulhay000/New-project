@@ -1,0 +1,196 @@
+:root {
+  /* COLORS */
+  /* Main website background
+       Use for: Navbar, Footer, dark sections */
+  --color-dark: #0d0b09;
+  --color-dark-brown: #14100c;
+  --color-coffee-brown: #f67834;
+  --color-bg--brown: rgba(13, 11, 9, 0.92);
+  /* Light gold / cream button color
+       Use for: Main "Order Now" buttons,
+       CTA buttons, highlighted boxes */
+  --color-light-gold: #fcb86f;
+  /* Main light section background
+       Use for: Services, Bestsellers,
+       Menu and other light sections */
+  --color-cream: #f7f3ee;
+  /* Soft white
+       Use for: Text on dark backgrounds,
+       hero headings, footer text */
+  --color-white: #f8f5f0;
+  /* Dark text
+       Use for: Text and headings on light
+       backgrounds */
+  --color-dark-text: #211811;
+  /* Light text
+       Use for: Paragraphs on dark backgrounds,
+       hero description */
+  --color-light-text: #f0e9e2;
+  /* Muted text
+       Use for: Secondary descriptions,
+       less important information */
+  --color-muted-text: #8c7d72;
+  /* Light border
+       Use for: Service cards, product cards,
+       input fields and separators */
+  --color-border: #e5d8ca;
+  --color-shadow: rgba(40, 25, 15, 0.08);
+
+  /* FONTS */
+  --font-heading: serif;
+  --font-body: "Inter", sans-serif;
+  --font-script: "Caveat", cursive;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  line-height: 1.6;
+}
+body {
+  font-family: var(--font-body);
+  font-size: 16px;
+}
+html {
+  scroll-behavior: smooth;
+}
+.img {
+  background-image:
+    linear-gradient(
+      90deg,
+      rgba(13, 11, 9, 0.92) 0%,
+      rgba(13, 11, 9, 0.55) 45%,
+      rgba(13, 11, 9, 0.1) 75%
+    ),
+    url("../Image/home-image.png");
+  background-size: cover;
+  background-position: center;
+  min-height: 635px;
+}
+header {
+  position: fixed;
+  z-index: 1000;
+  width: 100%;
+}
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5%;
+  color: var(--color-white);
+  z-index: 1000;
+  background-color: var(--color-bg--brown);
+  font-size: 15px;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+.logo h2 a,
+.logo p a,
+.bi-cup-hot {
+  text-decoration: none;
+  display: inline-block;
+}
+.bi-cup-hot {
+  color: var(--color-coffee-brown);
+  font-size: 35px;
+  margin-top: 10px;
+}
+.logo h2 a {
+  color: var(--color-white);
+}
+.logo p {
+  line-height: 0;
+}
+.logo p a {
+  line-height: 0.3;
+  font-size: 8px;
+  color: var(--color-white);
+}
+nav ul {
+  display: flex;
+  gap: 30px;
+}
+nav ul li {
+  list-style: none;
+}
+nav ul li a {
+  color: var(--color-white);
+  text-decoration: none;
+}
+nav ul li a:hover {
+  color: var(--color-light-gold);
+}
+#home {
+  padding: 150px 6% 0;
+  display: flex;
+  color: var(--color-white);
+}
+.home-text {
+  max-width: 500px;
+}
+.home-text h1 {
+  font-size: 70px;
+  width: 500px;
+  line-height: 0.95;
+  font-family: var(--font-heading);
+}
+.home-text h2 {
+  font-size: 40px;
+  font-family: var(--font-script);
+  color: var(--color-coffee-brown);
+}
+.home-description {
+  width: 325px;
+  margin: 15px 0;
+}
+.btn,
+.btn1 {
+  display: inline-block;
+  padding: 10px 30px;
+  margin: 15px 10px 50px 0;
+  text-decoration: none;
+  border-radius: 5px;
+  color: var(--color-white);
+  transition: 0.3s;
+}
+.btn {
+  background-color: var(--color-coffee-brown);
+  padding: 10px 25px;
+}
+.btn1 {
+  border: 1px solid var(--color-coffee-brown);
+}
+.btn .bi-cup-hot-fill {
+  color: var(--color-dark-text);
+  padding: 5px;
+}
+.btn:hover,
+.btn1:hover {
+  transform: scaleX(0.95);
+}
+.container {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.container div {
+  font-size: 15px;
+  padding-right: 20px;
+  border-right: 1px solid;
+}
+.container div p {
+  line-height: 1.3;
+}
+.container div p:nth-child(1) {
+  color: var(--color-light-gold);
+}
+.container svg {
+  font-size: 30px;
+  color: var(--color-light-gold);
+}
+.container .card-end {
+  border: none;
+}
