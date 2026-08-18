@@ -31,12 +31,9 @@ body {
   font-family: var(--font-body);
   font-size: 15px;
 }
-
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 60px;
 }
-
 .img {
   background-image:
     linear-gradient(
@@ -114,6 +111,28 @@ nav {
   color: var(--color-light-gold);
 }
 
+section {
+  padding: 45px 6%;
+  scroll-behavior: smooth;
+  scroll-margin-top: 60px;
+}
+.section-title {
+  font-size: 13px;
+  color: var(--color-light-gold);
+  text-align: center;
+  font-weight: bold;
+}
+.section-subtitle {
+  font-size: 35px;
+  text-align: center;
+  font-family: var(--font-heading);
+  margin-bottom: 20px;
+}
+#services,
+#menu {
+  background-color: var(--color-cream);
+  color: var(--color-dark-brown);
+}
 /* HOME */
 
 #home {
@@ -234,10 +253,11 @@ nav {
   min-height: 350px;
   background-color: var(--color-dark-brown);
   color: var(--color-white);
+  padding: 0;
 }
 
 .about-text {
-  padding: 45px 13%;
+  padding: 45px 14%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -312,24 +332,6 @@ nav {
 }
 
 /* service */
-
-#services {
-  padding: 45px 7%;
-  background-color: var(--color-cream);
-  color: var(--color-dark-brown);
-}
-.service-title {
-  font-size: 13px;
-  color: var(--color-light-gold);
-  text-align: center;
-  font-weight: bold;
-}
-.service-subtitle {
-  font-size: 35px;
-  text-align: center;
-  font-family: var(--font-heading);
-  margin-bottom: 20px;
-}
 .cards {
   display: flex;
   justify-content: center;
@@ -348,7 +350,7 @@ nav {
   box-shadow: 0 4px 10px var(--color-shadow);
   transition: 0.3s;
 }
-.card:hover{
+.card:hover {
   transform: translateY(-5px);
   box-shadow: 0 20px 20px var(--color-shadow);
 }
@@ -358,7 +360,6 @@ nav {
   border-radius: 50%;
   margin: 5px;
   background-color: var(--color-light-gold);
-
 }
 .icon {
   color: var(--color-dark-text);
@@ -366,7 +367,26 @@ nav {
 .card h3 {
   margin-bottom: 8px;
 }
-/* small screens  */
+
+/*  MENU*/
+
+.items {
+  display: flex;
+  gap: 20px;
+  padding: 10px 0;
+}
+.item{
+  max-width: 250px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+.item-info{
+  display: flex;
+  justify-content: space-between;
+}
+/* SMALL SCREENS  */
 @media (max-width: 700px) {
   html {
     scroll-padding-top: 200px;
