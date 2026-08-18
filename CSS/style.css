@@ -1,42 +1,20 @@
 :root {
   /* COLORS */
-  /* Main website background
-       Use for: Navbar, Footer, dark sections */
-  --color-dark: #0d0b09;
-  --color-dark-brown: #14100c;
+  --color-dark: #120d09;
+  --color-dark-brown: #1c120d;
   --color-coffee-brown: #f67834;
+  --color-light-gold: #edb67b6f;
   --color-bg--brown: rgba(13, 11, 9, 0.92);
-  /* Light gold / cream button color
-       Use for: Main "Order Now" buttons,
-       CTA buttons, highlighted boxes */
-  --color-light-gold: #fcb86f;
-  /* Main light section background
-       Use for: Services, Bestsellers,
-       Menu and other light sections */
-  --color-cream: #f7f3ee;
-  /* Soft white
-       Use for: Text on dark backgrounds,
-       hero headings, footer text */
-  --color-white: #f8f5f0;
-  /* Dark text
-       Use for: Text and headings on light
-       backgrounds */
-  --color-dark-text: #211811;
-  /* Light text
-       Use for: Paragraphs on dark backgrounds,
-       hero description */
-  --color-light-text: #f0e9e2;
-  /* Muted text
-       Use for: Secondary descriptions,
-       less important information */
-  --color-muted-text: #8c7d72;
-  /* Light border
-       Use for: Service cards, product cards,
-       input fields and separators */
-  --color-border: #e5d8ca;
-  --color-shadow: rgba(40, 25, 15, 0.08);
+  --color-cream: #f7f1e8;
+  --color-white: #fffaf3;
+  --color-dark-text: #5c2b0c;
+  --color-light-text: #eee3d6;
+  --color-muted-text: #bfb2a5;
+  --color-border: #f4d6acb1;
+  --color-shadow: rgba(129, 110, 96, 0.169);
 
   /* FONTS */
+
   --font-heading: serif;
   --font-body: "Inter", sans-serif;
   --font-script: "Caveat", cursive;
@@ -46,18 +24,17 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  line-height: 1.6;
 }
 
 body {
   overflow-x: hidden;
   font-family: var(--font-body);
-  font-size: 16px;
+  font-size: 15px;
 }
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 100px;
+  scroll-padding-top: 60px;
 }
 
 .img {
@@ -70,7 +47,7 @@ html {
     ),
     url("../Image/home-image.png");
   background-size: cover;
-  background-position: center;
+  background-position: center 80%;
   min-height: 635px;
 }
 
@@ -104,11 +81,7 @@ nav {
   color: var(--color-coffee-brown);
   text-decoration: none;
   display: inline-block;
-  vertical-align: middle;
-}
-
-.brand-text {
-  line-height: 1;
+  margin-top: 5px;
 }
 
 .brand-name a {
@@ -154,9 +127,10 @@ nav {
 .home-text {
   max-width: 500px;
   width: 100%;
+}
+.animation-slideUp {
   animation: slideUp 2s ease;
 }
-
 @keyframes slideUp {
   from {
     opacity: 0;
@@ -176,19 +150,20 @@ nav {
 
 .home-title {
   font-size: 70px;
-  line-height: 0.95;
+  line-height: 0.9;
   font-family: var(--font-heading);
 }
 
 .home-description {
-  max-width: 325px;
+  max-width: 300px;
   margin: 15px 0;
+  line-height: 1.3;
 }
 
 .btn,
 .btn1 {
   display: inline-block;
-  padding: 10px 30px;
+  padding: 15px 30px;
   margin: 15px 10px 50px 0;
   text-decoration: none;
   border-radius: 5px;
@@ -198,7 +173,6 @@ nav {
 
 .btn {
   background-color: var(--color-coffee-brown);
-  padding: 10px 25px;
 }
 
 .btn1 {
@@ -227,9 +201,9 @@ nav {
 .feature-item {
   display: flex;
   align-items: center;
-  gap: 9px;
+  gap: 8px;
   padding-right: 20px;
-  border-right: 1px solid;
+  border-right: 1px solid var(--color-light-gold);
   white-space: nowrap;
 }
 
@@ -243,22 +217,155 @@ nav {
   color: var(--color-light-gold);
 }
 
-.feature-text {
-  line-height: 1.3;
-}
-
 .feature-title {
   color: var(--color-light-gold);
 }
 
 .feature-subtitle {
   color: var(--color-white);
+  font-size: 14px;
 }
 
 /* ABOUT */
 
+#about {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  min-height: 350px;
+  background-color: var(--color-dark-brown);
+  color: var(--color-white);
+}
 
+.about-text {
+  padding: 45px 13%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 
+.about-title {
+  color: var(--color-light-gold);
+  font-size: 13px;
+  margin-bottom: 5px;
+}
+
+.about-subtitle {
+  font-family: var(--font-heading);
+  font-size: 35px;
+  margin-bottom: 15px;
+}
+
+.about-description {
+  color: var(--color-muted-text);
+  font-size: 13px;
+  max-width: 330px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.features1 {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-top: 25px;
+}
+
+.feature-item1 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding-right: 15px;
+  border-right: 1px solid var(--color-light-gold);
+  white-space: nowrap;
+}
+
+.feature-item1.feature-last1 {
+  border-right: none;
+  padding-right: 0;
+}
+
+.feature-icon1 {
+  flex-shrink: 0;
+  color: var(--color-light-gold);
+}
+
+.feature-title1 {
+  color: var(--color-light-gold);
+  line-height: 1;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.feature-subtitle1 {
+  color: var(--color-white);
+  font-size: 14px;
+}
+
+.about-image {
+  width: 100%;
+  height: 100%;
+  min-height: 350px;
+  background-image: url("../Image/about-image.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* service */
+
+#services {
+  padding: 45px 7%;
+  background-color: var(--color-cream);
+  color: var(--color-dark-brown);
+}
+.service-title {
+  font-size: 13px;
+  color: var(--color-light-gold);
+  text-align: center;
+  font-weight: bold;
+}
+.service-subtitle {
+  font-size: 35px;
+  text-align: center;
+  font-family: var(--font-heading);
+  margin-bottom: 20px;
+}
+.cards {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  padding: 10px 0;
+}
+.card {
+  max-width: 250px;
+  padding: 35px 20px;
+  border-radius: 7px;
+  font-size: 14px;
+  text-align: center;
+  line-height: 1.4;
+  border: 1px solid var(--color-border);
+  box-shadow: 0 4px 10px var(--color-shadow);
+  transition: 0.3s;
+}
+.card:hover{
+  transform: translateY(-5px);
+  box-shadow: 0 20px 20px var(--color-shadow);
+}
+.icons {
+  display: inline-block;
+  padding: 10px;
+  border-radius: 50%;
+  margin: 5px;
+  background-color: var(--color-light-gold);
+
+}
+.icon {
+  color: var(--color-dark-text);
+}
+.card h3 {
+  margin-bottom: 8px;
+}
 /* small screens  */
 @media (max-width: 700px) {
   html {
